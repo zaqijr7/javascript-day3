@@ -11,7 +11,9 @@ function Fetch(){
             console.log(e.name); 
         })
     })
+    .catch(() => {
+        console.log('error get data'); 
+    })
 }
-
 
 Fetch()
