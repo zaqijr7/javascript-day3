@@ -1,8 +1,11 @@
 function Fetch(){
     const url = 'https://jsonplaceholder.typicode.com/users'
-    fetch(url, {
+    return fetch(url, {
         method: 'GET'
     })
+}
+
+Fetch()
     .then((response) => {
         return response.json()
     })
@@ -14,6 +17,3 @@ function Fetch(){
     .catch(() => {
         console.log('error get data'); 
     })
-}
-
-Fetch()

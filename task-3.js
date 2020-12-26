@@ -1,7 +1,8 @@
  const buyBook = (data) => {
      return new Promise((resolve, reject) => {
          setTimeout(() => {
-             const book = ['Pemrogramman PHP', 'Styling css', 'Rahasia Pintu Rezeki', 'Nyanyian Surau', 'Cahaya Kolbu']
+             const book = ['Pemrogramman PHP', 'Styling css', 'Rahasia Pintu Rezeki', 'Nyanyian Surau', 
+                            'Cahaya Kolbu']
              const {name, noBook} = data;
              let danger = noBook > book.length;
 
@@ -12,18 +13,15 @@
              }
          }, 3000)
      })
-     .then((result) => {
-         console.log(`${result.name} akan membeli buku : ${result.book}`);
-     })
-     .catch((err) => {
-        throw err;
-     })
  }
 
- buyBook({
-     name: 'Muhammad Zaqi',
-     noBook: 1
- })
+ buyBook({name: 'Muhammad Zaqi', noBook: 1})
+        .then((result) => {
+            console.log(`${result.name} akan membeli buku : ${result.book}`);
+        })
+        .catch((err) => {
+        throw err;
+        })
 
 
  //==============================================
